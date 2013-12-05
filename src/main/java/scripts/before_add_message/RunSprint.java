@@ -39,10 +39,10 @@ public class RunSprint extends CommonScrum implements OperationTrigger {
                 }
                 return message;
             } else {
-                throw new UserException("Бюджет спринта меньше бюджета входящих в него задач. Переопределите бюджет или состав спринта");
+                throw new UserException("Бюджет спринта меньше бюджета входящих в него задач. Переопределите бюджет или состав спринта", true);
             }
         }
-        else throw new UserException("Сначала определите бюджет спринта");
+        else throw new UserException("Сначала определите бюджет спринта", true);
 
     }
 }

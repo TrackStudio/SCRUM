@@ -16,7 +16,7 @@ public class CheckSprintRunning  extends CommonScrum implements OperationTrigger
 
         String runState = SCRUM_SPRINT_STATE_RUN;
         if (message.getTask().getParent().getStatusId().equals(runState))
-            throw new UserException("Сначала остановите спринт");
+            throw new UserException("Сначала остановите спринт", true);
         return message;
     }
 }

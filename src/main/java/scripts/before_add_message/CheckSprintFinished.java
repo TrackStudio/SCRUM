@@ -15,7 +15,7 @@ public class CheckSprintFinished  extends CommonScrum implements OperationTrigge
 
     public SecuredMessageTriggerBean execute(SecuredMessageTriggerBean message) throws GranException {
         for (SecuredTaskBean task : message.getTask().getChildren()) {
-            if (!task.getStatus().isFinish()) throw new UserException("Все задачи в спринте должны быть завершены");
+            if (!task.getStatus().isFinish()) throw new UserException("Все задачи в спринте должны быть завершены", true);
         }
         return message;
     }
