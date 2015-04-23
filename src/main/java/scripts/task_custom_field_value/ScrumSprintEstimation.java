@@ -70,27 +70,8 @@ public class ScrumSprintEstimation extends CommonScrum implements TaskUDFValueSc
 
                     odd = !odd;
                     taskTable.append("<td>");
-                    taskTable.append("<a class=\"internal\" href=\"");
-
-                    taskTable.append(context.getContextPath());
-                    taskTable.append("/task/");
+                    taskTable.append("##");
                     taskTable.append(task.getNumber());
-                    taskTable.append("\">");
-
-                    taskTable.append("<img class=\"state\" border=\"0\"")
-                            .append(" style=\"background-color: ")
-                            .append(task.getStatus().getColor())
-                            .append("; margin-right: 5px;\"")
-                            .append(" src=\"")
-                            .append( context.getContextPath())
-                            .append("/cssimages/");
-                    if (task.getStatus().isFinish())
-                        taskTable.append("finishstate.gif");
-                    else taskTable.append("state.gif");
-                    taskTable.append("\">");
-
-                    taskTable.append(task.getName());
-                    taskTable.append("</a>");
                     taskTable.append("</td>");
 
                     Long aLong = task.getBudget();
