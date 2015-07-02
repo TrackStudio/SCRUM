@@ -53,7 +53,7 @@ public class ScrumItemEstimation extends CommonScrum implements TaskUDFValueScri
                             hours = (Integer.parseInt(v.toString()));
                         }
                     } else {
-                        hours = (Integer.parseInt(customField));
+                        hours = 40;
                     }
                     long time2 = (long) hours;
 
